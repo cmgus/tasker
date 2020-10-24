@@ -1,9 +1,10 @@
 import React from 'react'
+import { Home } from './pages/Home'
 
 export const App = () => {
     return (
-        <div className="container">
-            <h3>Tasker</h3>
-        </div>
+        <>
+            <Home />
+        </>
     )
 }
