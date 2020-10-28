@@ -1,13 +1,9 @@
 import React from 'react'
 import { SignInForm } from '../components/SignInForm'
-import { NavbarApp } from '../components/NavbarApp'
 import { Column, Hero, Container } from 'rbx'
 export const Home = () => {
     return (
-        <Hero color="black" size="fullheight">
-            <Hero.Head>
-                <NavbarApp />
-            </Hero.Head>
+        <Hero color="light" size="fullheight-with-navbar">
             <Hero.Body>
                 <Container>
                     <Column.Group vcentered>

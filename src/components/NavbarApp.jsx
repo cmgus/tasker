@@ -1,17 +1,18 @@
 import React from 'react'
 import { Container, Navbar } from 'rbx'
 import { AuthButtons } from './AuthButtons'
+import { Link } from 'react-router-dom'
 export const NavbarApp = () => {
     return (
         <Navbar color="black">
             <Container>
                 <Navbar.Brand>
-                    <Navbar.Item href="/">
+                    <Link to="/" className="navbar-item">
                         <span className="title has-text-white">Tasker</span>
-                    </Navbar.Item>
+                    </Link>
                     <Navbar.Burger />
                 </Navbar.Brand>
-                <Navbar.Menu>
+                <Navbar.Menu backgroundColor="black">
                     <Navbar.Segment align="end">
                         <AuthButtons />
                     </Navbar.Segment>
