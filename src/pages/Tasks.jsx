@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import { Column, Card, Container, Section, Field, Textarea, Button } from 'rbx'
+import { Column, Card, Container, Section, Field, Textarea, Button, Delete, Box, Media } from 'rbx'
 import { useUser, useFirestore, useFirestoreCollectionData } from 'reactfire'
 
 export const Tasks = () => {
@@ -35,7 +35,23 @@ export const Tasks = () => {
                     </Column>
                     {tasks.map((task, i) => (
                         <Column size="3" key={i}>
-                            <Card>
+                            <Box textColor="success">
+                                <Media>
+                                    <Media.Item align="content">
+                                        {task.name}
+                                    </Media.Item>
+                                    <Media.Item align="right" marginless>
+                                        <Delete />
+                                    </Media.Item>
+                                </Media>
+                            </Box>
+                            {/* <Card>
+                                <Card.Header className="is-justify-content-end" paddingless>
+                                    <Card.Header.Icon>
+                                        <Delete />
+                                    </Card.Header.Icon>
+                                </Card.Header>
+
                                 <Card.Content
                                     backgroundColor={`${task.done ? 'success' : 'white'}`}
                                     textColor={`${task.done ? 'white' : 'black'}`}>
@@ -49,7 +65,7 @@ export const Tasks = () => {
                                         Delete
                                         </Card.Footer.Item>
                                 </Card.Footer>
-                            </Card>
+                            </Card> */}
                         </Column>
                     ))}
                 </Column.Group>
